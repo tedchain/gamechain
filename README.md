@@ -109,8 +109,10 @@ To create a statically linked gamechain which only depends on default MacOS dyli
 The default brew cookbook for berkeley-db and boost builds static libraries, but the default cookbook for openssl only builds dylibs.
 
 Tell brew to build openssl static libraries:
+    
     brew edit openssl
-        In 'def configure_args' change 'shared' to 'no-shared'
+In 'def configure_args' change 'shared' to 'no-shared'
+    
     brew install openssl --force
 
 Compile gamechain for Mac (64-bit)
